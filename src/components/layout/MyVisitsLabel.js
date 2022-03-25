@@ -3,7 +3,9 @@ import classes from "./LayoutLabel.module.css";
 
 const MyVisitsLabel = () => {
   return (
-      <span className={classes.layoutlabel}>myvisits</span>
+    <div className={classes.layoutlabel}>
+      <h4>myvisits</h4>
+    </div>
   );
 };
 export default MyVisitsLabel;

@@ -4,10 +4,17 @@
   border: none;
   background-color: white;
   color: black;
-  padding: 0.10rem 0.4rem;
+  padding: 0.1rem 0.4rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 25px;
   font-weight: bold;
 }
+
+.layoutlabel h4:hover,
+.layoutlabel h4:active {
+  color: rgb(75, 75, 148);
+}
+
+

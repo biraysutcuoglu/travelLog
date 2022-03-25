@@ -1,9 +1,11 @@
 import React from "react";
 import classes from "./LayoutLabel.module.css";
 
-const WishListLabel = () => {
+const WishListLabel = (props) => {
   return (
-      <span className={classes.layoutlabel}>wishlist</span>
+    <div className={classes.layoutlabel}>
+      <h4>wishlist</h4>
+    </div>
   );
 };
 export default WishListLabel;

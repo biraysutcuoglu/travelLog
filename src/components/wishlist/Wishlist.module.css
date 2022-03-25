@@ -1,0 +1,23 @@
+.wishlistItems{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.actions{
+    text-align: right;
+}
+
+.actions button{
+    font: inherit;
+    font-weight: bolder;
+    background-color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+.actions button:hover,
+.actions button:active{
+    color: rgb(75, 75, 148);
+}

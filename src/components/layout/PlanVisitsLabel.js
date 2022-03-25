@@ -3,7 +3,9 @@ import classes from "./LayoutLabel.module.css";
 
 const PlanVisitsLabel = () => {
   return (
-      <span className={classes.layoutlabel}>plan-visits</span>
+    <div className={classes.layoutlabel}>
+      <h4>plan-visits</h4>
+    </div>
   );
 };
 export default PlanVisitsLabel;
