@@ -1,0 +1,13 @@
+.layoutlabel {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 0.10rem 0.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+  font-weight: bold;
+}

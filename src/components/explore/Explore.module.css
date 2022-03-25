@@ -1,0 +1,31 @@
+.explore {
+  text-align: left;
+  margin: auto;
+  margin: auto;
+  margin-top: 80px;
+  position: relative;
+  background-color: whitesmoke;
+  padding: 1rem;
+}
+.sites {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: sites-appear 1s ease-out forwards;
+}
+.sites ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@keyframes sites-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
