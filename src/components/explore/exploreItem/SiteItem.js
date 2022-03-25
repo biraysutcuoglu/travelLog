@@ -1,5 +1,6 @@
 import classes from "./SiteItem.module.css";
 import React from "react";
+import SiteItemForm from "./SiteItemForm";
 
 const SiteItem = (props) => {
   return <li className={classes.site}>
@@ -8,6 +9,7 @@ const SiteItem = (props) => {
         <div className={classes.description}>{props.description}</div>
         <div className={classes.country}>{props.country}</div>
       </div>
+      <div><SiteItemForm id={props.id}/></div>
   </li>;
 };
 export default SiteItem;
