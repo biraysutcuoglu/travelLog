@@ -10,7 +10,7 @@ const Header = (props) => {
       <header className={classes.header}>
         <h1>travel-log.</h1>
           <MyVisitsLabel />
-          <WishListLabel />
+          <WishListLabel onClick={props.onWishlist}/>
           <PlanVisitsLabel />
       </header>
     </Fragment>

@@ -10,10 +10,10 @@ const Wishlist = (props) => {
     </ul>
   );
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       {wishlistItems}
       <div className={classes.actions}>
-        <button>x</button>
+        <button onClick={props.onClose}>x</button>
       </div>
     </Modal>
   );

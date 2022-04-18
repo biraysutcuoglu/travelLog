@@ -12,9 +12,18 @@
   font-weight: bold;
 }
 
-.layoutlabel h4:hover,
-.layoutlabel h4:active {
+.layoutlabel:hover,
+.layoutlabel:active {
   color: rgb(75, 75, 148);
 }
+
+.badge{
+  font-size: x-small;
+  padding-left: 1px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+
 
 

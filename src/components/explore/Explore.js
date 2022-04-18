@@ -14,7 +14,7 @@ const DUMMY_SITES = [
     id: "s2",
     name: "Tate Modern",
     description: "Impressive modern art galleries.",
-    country: "London",
+    country: "UK",
   },
   {
     id: "s3",
@@ -28,6 +28,7 @@ const Explore = () => {
   const sitesList = DUMMY_SITES.map((site) => (
     <SiteItem
       key={site.id}
+      id={site.id}
       name={site.name}
       description={site.description}
       country={site.country}
