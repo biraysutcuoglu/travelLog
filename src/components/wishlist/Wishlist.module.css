@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.planVisit{
+    font-size: small;
+}
+
 .actions{
     text-align: right;
 }

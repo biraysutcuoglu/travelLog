@@ -13,7 +13,21 @@ const defaultWishlistState = {
 
 const wishlistReducer = (state, action) => {
   if (action.type === "ADD") {
-    const updatedItems = state.items.concat(action.item); //adds new item to array by returning a new array (immutable)
+    const existingWishlistItemIndex = state.items.findIndex(
+      //find the index of item with the same name (not found -1)
+      (item) => item.name === action.item.name
+    );
+
+    let updatedItems;
+    if (existingWishlistItemIndex === -1) {
+      //add
+      updatedItems = state.items.concat(action.item); 
+
+    } else {
+      console.log("Already in wishlist.");
+      updatedItems = [...state.items];
+    }
+    
     const updatedTotalAmount = state.totalAmount + 1;
     const updatedDate = state.date;
     return {
