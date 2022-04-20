@@ -21,13 +21,12 @@ const wishlistReducer = (state, action) => {
     let updatedItems;
     if (existingWishlistItemIndex === -1) {
       //add
-      updatedItems = state.items.concat(action.item); 
-
+      updatedItems = state.items.concat(action.item);
     } else {
       console.log("Already in wishlist.");
       updatedItems = [...state.items];
     }
-    
+
     const updatedTotalAmount = state.totalAmount + 1;
     const updatedDate = state.date;
     return {
@@ -35,6 +34,27 @@ const wishlistReducer = (state, action) => {
       items: updatedItems,
       totalAmount: updatedTotalAmount,
       date: updatedDate,
+    };
+  }
+  if (action.type === "REMOVE") {
+    console.log(state.items);
+    //console.log(action.name);
+
+    const existingWishlistItemIndex = state.items.findIndex(
+      (item) => item.name === action.name
+    );
+
+    const updatedTotalAmount = state.totalAmount - 1;
+    let updatedItems;
+    if (existingWishlistItemIndex !== -1) {
+      updatedItems = state.items.filter(
+        //returns filtered new array
+        item => item.name !== action.name //only take objects different than current item (to be removed item)
+      );
+    }
+    return {
+      items: updatedItems,
+      totalAmount: updatedTotalAmount,
     };
   }
   return defaultWishlistState;
@@ -49,8 +69,8 @@ const WishlistProvider = (props) => {
   const addItemToWishlistsHandler = (item) => {
     dispatchWishlistAction({ type: "ADD", item: item });
   };
-  const removeItemFromWishlistHandler = (id) => {
-    dispatchWishlistAction({ type: "REMOVE", id: id });
+  const removeItemFromWishlistHandler = (name) => {
+    dispatchWishlistAction({ type: "REMOVE", name: name });
   };
 
   const wishlistContext = {

@@ -6,7 +6,7 @@ const WishlistContext = React.createContext({
   totalAmount: 0,
   date: "",
   addItem: (item) => {}, //receives the item should be added
-  removeItem: (id) => {},
+  removeItem: (name) => {},
 });
 
 export default WishlistContext;

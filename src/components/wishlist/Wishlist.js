@@ -9,8 +9,10 @@ const Wishlist = (props) => {
   const enteredDate = wishlistCtx.date;
   const hasItems = wishlistCtx.items.length > 0;
 
-  const wishlistItemRemoveHandler = (id) => {};
-  const wishlistItemAddHandler = (item) => {};
+  const wishlistItemRemoveHandler = (name) => {
+    // console.log(name);
+    wishlistCtx.removeItem(name);
+  };
 
   const wishlistItems = (
     <ul className={classes.wishlistItems}>
@@ -20,8 +22,7 @@ const Wishlist = (props) => {
           name={item.name}
           country={item.country}
           date={enteredDate}
-          onRemove={wishlistItemRemoveHandler.bind(null, item.id)}
-          onAdd={wishlistItemAddHandler.bind(null, item)}
+          onRemove={wishlistItemRemoveHandler.bind(null, item.name)}
         />
       ))}
     </ul>
