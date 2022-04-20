@@ -37,16 +37,13 @@ const wishlistReducer = (state, action) => {
     };
   }
   if (action.type === "REMOVE") {
-    console.log(state.items);
-    //console.log(action.name);
-
     const existingWishlistItemIndex = state.items.findIndex(
       (item) => item.name === action.name
     );
 
     const updatedTotalAmount = state.totalAmount - 1;
     let updatedItems;
-    if (existingWishlistItemIndex !== -1) {
+    if (existingWishlistItemIndex !== -1) { 
       updatedItems = state.items.filter(
         //returns filtered new array
         item => item.name !== action.name //only take objects different than current item (to be removed item)
